@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from "@angular/forms";
-import {RosConnectionService} from "../../external/ros.connection.service.t";
+import {RosConnectionService} from "../../external/ros.connection.service";
 import * as ROSLIB from "roslib";
 
 @Component({

@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import * as ROS3D from 'ros3d'
-import {RosConnectionService} from "../../external/ros.connection.service.t";
+import {RosConnectionService} from "../../external/ros.connection.service";
 
 @Component({
   selector: 'app-robot-viewer',
