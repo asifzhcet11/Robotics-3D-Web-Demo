@@ -1,0 +1,4 @@
+input.ng-invalid.ng-touched{
+  outline: none;
+  box-shadow: 0 0 15px #dc3545;
+}

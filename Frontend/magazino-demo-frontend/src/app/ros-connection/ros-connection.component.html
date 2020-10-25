@@ -1,0 +1,16 @@
+<form class="form-inline" (ngSubmit)="onConnect(formElement)" #formElement="ngForm">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <input type="text"
+             class="form-control"
+             placeholder="address : port"
+             aria-describedby="rosWebsockets"
+             ngModel
+             name="rosAddress"
+             required>
+      <button type="submit"
+              class="btn btn-primary"
+              [disabled]="formElement.invalid || isConnected">Connect</button>
+    </div>
+  </div>
+</form>
