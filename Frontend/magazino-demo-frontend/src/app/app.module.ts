@@ -6,12 +6,14 @@ import { ActionMoveToComponent } from './action-move-to/action-move-to.component
 import {FormsModule} from "@angular/forms";
 import { RosConnectionComponent } from './ros-connection/ros-connection.component';
 import {RosConnectionService} from "../external/ros.connection.service.t";
+import { RobotViewerComponent } from './robot-viewer/robot-viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActionMoveToComponent,
-    RosConnectionComponent
+    RosConnectionComponent,
+    RobotViewerComponent
   ],
   imports: [
     BrowserModule,
