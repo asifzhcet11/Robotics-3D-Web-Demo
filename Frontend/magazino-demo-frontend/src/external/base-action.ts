@@ -1,5 +1,6 @@
-// defining enum for response from backend
+import * as ROSLIB from 'roslib';
 
+// defining enum for response from backend
 export enum Response {
   SUCCESS,
   FAILURE
@@ -9,7 +10,7 @@ export enum Response {
 * Base class to be used for the actions for e.g. MoveTo, Gripper
 */
 
-export class BaseAction {
+export abstract class BaseAction {
 
   private _name: string;
   private _values: number[];
@@ -43,4 +44,6 @@ export class BaseAction {
   set response(value: Response){
     this._response = value;
   }
+
+  abstract convertToRosMessage(): ROSLIB.Message;
 }

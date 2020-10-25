@@ -1,0 +1,17 @@
+<form class="form-inline" (ngSubmit)="onSubmit(formElement)" #formElement="ngForm">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <input type="text"
+             class="form-control"
+             placeholder="x, y, z, roll, yaw, pitch"
+             aria-describedby="moveToPose"
+             ngModel
+             name="pose"
+             required
+             minlength="11">
+      <button type="submit"
+              class="btn btn-primary"
+              [disabled]="formElement.invalid">Move To</button>
+    </div>
+  </div>
+</form>
