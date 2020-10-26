@@ -27,6 +27,7 @@ export class DisplayActionComponent implements OnInit {
   }
 
   plan(){
+    this.isPlanSuccess = false;
     const service = this.rosConnectionService.getRosService(this.action.type);
     if (service === undefined){
       this.isPlanSuccess = false;

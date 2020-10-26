@@ -23,7 +23,7 @@ export class ActionMoveToComponent implements OnInit {
     let pose = form.value['pose'];
 
     // converting string to number array
-    pose = pose.match(/\d+(?:\.\d+)?/g).map(Number);
+    pose = pose.split(',').map(Number);
 
     // creating a move to action
     const moveToAction = new MoveToAction('Move To', pose);
