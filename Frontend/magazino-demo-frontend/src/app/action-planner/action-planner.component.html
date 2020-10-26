@@ -1,11 +1,11 @@
-<div class="card text-center bg-white">
-  <div *ngFor="let action of actions; let i = index">
+<div cdkDropList class="card text-center bg-white" (cdkDropListDropped)="drop($event)">
+  <div *ngFor="let action of actions; let i = index" cdkDrag>
     <app-display-action
       [action]="action"
       [id] = i>
     </app-display-action>
     <hr>
   </div>
-  <button type="button" class="btn btn-primary">Plan Group</button>
+  <button type="button" class="btn btn-primary" (click)="planGroup()">Plan Group</button>
 
 </div>

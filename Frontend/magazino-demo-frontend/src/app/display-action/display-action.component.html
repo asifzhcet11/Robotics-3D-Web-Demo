@@ -10,7 +10,7 @@
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-primary" (click)="plan()">Plan</button>
       <button type="button" class="btn btn-danger" (click)="onRemove()">Remove</button>
-      
+      <button type="button" class="btn disabled" [ngClass]="{'btn-success': isPlanSuccess, 'btn-danger': !isPlanSuccess}"></button>
     </div>
   </div>
 </div>

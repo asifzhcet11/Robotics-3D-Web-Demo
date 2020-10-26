@@ -28,6 +28,5 @@ export class ActionMoveToComponent implements OnInit {
     // creating a move to action
     const moveToAction = new MoveToAction('Move To', pose);
     this.actionMotionPlannerService.addAction(moveToAction);
-    console.log(moveToAction.convertToRosMessage());
   }
 }

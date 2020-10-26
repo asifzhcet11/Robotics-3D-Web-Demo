@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatSelectModule} from '@angular/material/select';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
 import { ActionMoveToComponent } from './action-move-to/action-move-to.component';
@@ -28,7 +29,8 @@ import {OverlayModule} from "@angular/cdk/overlay";
     BrowserModule,
     FormsModule,
     MatSelectModule,
-    OverlayModule
+    OverlayModule,
+    DragDropModule
   ],
   providers: [RosConnectionService, ActionMotionPlannerService],
   bootstrap: [AppComponent]
