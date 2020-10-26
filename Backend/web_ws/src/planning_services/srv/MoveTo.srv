@@ -1,0 +1,3 @@
+geometry_msgs/Pose message
+---
+int8 result

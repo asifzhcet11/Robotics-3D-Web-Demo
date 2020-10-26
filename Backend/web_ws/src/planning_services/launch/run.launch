@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Service starting -->
+    <node name="move_to_server" pkg="planning_services" type="move_to_server.py"  output="screen" respawn="true" >
+        
+    </node>
+
+</launch>

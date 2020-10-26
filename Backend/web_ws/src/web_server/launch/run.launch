@@ -1,0 +1,16 @@
+<launch>
+  <!-- rosbridge server -->
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+      <arg name="port" value="8080"/>
+      <arg name="address" default="192.168.2.108" />
+    </include>
+
+  <!-- panda robot -->
+  <include file="$(find panda_moveit_config)/launch/demo.launch">  
+  </include>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="virtual_joint_broadcaster_2" args="0 0 0 0 0 0 world base_link" />
+  
+  <!-- tf web publisher -->
+  <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher" respawn="false" output="screen"/>
+</launch>
