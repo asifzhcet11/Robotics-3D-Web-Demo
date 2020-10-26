@@ -1,0 +1,11 @@
+<div class="card text-center bg-white">
+  <div *ngFor="let action of actions; let i = index">
+    <app-display-action
+      [action]="action"
+      [id] = i>
+    </app-display-action>
+    <hr>
+  </div>
+  <button type="button" class="btn btn-primary">Plan Group</button>
+
+</div>

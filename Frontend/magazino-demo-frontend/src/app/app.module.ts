@@ -9,6 +9,10 @@ import { RosConnectionComponent } from './ros-connection/ros-connection.componen
 import {RosConnectionService} from "../external/ros.connection.service";
 import { RobotViewerComponent } from './robot-viewer/robot-viewer.component';
 import { AddRobotComponent } from './add-robot/add-robot.component';
+import { ActionPlannerComponent } from './action-planner/action-planner.component';
+import {ActionMotionPlannerService} from "../external/action.motion.planner.service";
+import { DisplayActionComponent } from './display-action/display-action.component';
+import {OverlayModule} from "@angular/cdk/overlay";
 
 @NgModule({
   declarations: [
@@ -17,13 +21,16 @@ import { AddRobotComponent } from './add-robot/add-robot.component';
     RosConnectionComponent,
     RobotViewerComponent,
     AddRobotComponent,
+    ActionPlannerComponent,
+    DisplayActionComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    OverlayModule
   ],
-  providers: [RosConnectionService],
+  providers: [RosConnectionService, ActionMotionPlannerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

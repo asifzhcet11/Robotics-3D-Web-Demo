@@ -1,4 +1,5 @@
 import * as ROSLIB from 'roslib';
+import {ActionType} from "./action.type";
 
 // defining enum for response from backend
 export enum Response {
@@ -14,11 +15,12 @@ export abstract class BaseAction {
 
   private _name: string;
   private _values: number[];
-  private _response: Response;
+  private _type: ActionType;
 
-  constructor(name: string, values: number[]){
+  constructor(name: string, values: number[], type: ActionType){
     this.name = name;
     this.values = values;
+    this.type = type;
   }
 
   get name(): string{
@@ -37,13 +39,14 @@ export abstract class BaseAction {
     this._values = value;
   }
 
-  get response(): Response{
-    return this._response;
+  get type(): ActionType{
+    return this._type
   }
 
-  set response(value: Response){
-    this._response = value;
+  set type(value: ActionType){
+    this._type = value;
   }
 
   abstract convertToRosMessage(): ROSLIB.Message;
+
 }

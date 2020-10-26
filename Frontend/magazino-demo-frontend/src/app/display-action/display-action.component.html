@@ -1,0 +1,19 @@
+<div class="card text-center shadow p-3 mb-5 bg-white rounded" *ngIf="action.name === 'Move To'">
+  <div class="card-header">
+    <h5>Move To
+    </h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{action.values}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary" (click)="plan()">Plan</button>
+      <button type="button" class="btn btn-danger" (click)="onRemove()">Remove</button>
+      
+    </div>
+  </div>
+</div>
+
+
+

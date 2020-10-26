@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {MoveToAction} from "./move-to-action";
+import {ActionMotionPlannerService} from "../../external/action.motion.planner.service";
+import {RosConnectionService} from "../../external/ros.connection.service";
+import * as ROSLIB from "roslib";
+
 
 
 @Component({
@@ -10,7 +14,7 @@ import {MoveToAction} from "./move-to-action";
 })
 export class ActionMoveToComponent implements OnInit {
 
-  constructor() { }
+  constructor(private actionMotionPlannerService: ActionMotionPlannerService) { }
 
   ngOnInit(): void {
   }
@@ -23,8 +27,7 @@ export class ActionMoveToComponent implements OnInit {
 
     // creating a move to action
     const moveToAction = new MoveToAction('Move To', pose);
-
+    this.actionMotionPlannerService.addAction(moveToAction);
     console.log(moveToAction.convertToRosMessage());
   }
-
 }

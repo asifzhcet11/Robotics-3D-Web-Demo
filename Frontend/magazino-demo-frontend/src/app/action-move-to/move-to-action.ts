@@ -1,12 +1,12 @@
 import {BaseAction} from "../../external/base-action";
 import * as ROSLIB from "roslib";
 import * as THREE from "three";
+import {ActionType} from "../../external/action.type";
 
 export class MoveToAction extends BaseAction{
-
   private _pose: ROSLIB.Pose;
-  constructor(name: string, values: number[]){
-    super(name, values);
+  constructor(name: string, values: number[], type=ActionType.MoveTo){
+    super(name, values, type);
     this._convertArrayToPose();
   }
 

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {RosConnectionService} from "../../external/ros.connection.service";
 import * as ROSLIB from "roslib";
+import {ActionType} from "../../external/action.type";
 
 @Component({
   selector: 'app-ros-connection',
@@ -9,6 +10,7 @@ import * as ROSLIB from "roslib";
   styleUrls: ['./ros-connection.component.css']
 })
 export class RosConnectionComponent implements OnInit {
+
 
   isConnected: boolean = false;
 
@@ -26,6 +28,7 @@ export class RosConnectionComponent implements OnInit {
       // on connection information
       this.rosConnectionService.rosInstance.on('connection', () => {
         console.log('Connected to websocket server.');
+        this.rosConnectionService.initActionRosServicePair();
         this.isConnected = true;
       });
 
@@ -47,5 +50,7 @@ export class RosConnectionComponent implements OnInit {
         transThres : 0.01,
         rate : 30.0
       });
+
+      //
   }
 }
