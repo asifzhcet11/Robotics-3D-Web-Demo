@@ -1,4 +1,4 @@
-# Magazino-Demo
+# Robotics-3D-Web-Demo
 
 ## Frontend
 
