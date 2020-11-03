@@ -1,4 +1,4 @@
-# Magazino Demo Backend
+# Robotics Demo Backend
 
 A ROS-service is written to accept the pose of the robot and using Moveit planning is performed. 
 
