@@ -1,4 +1,4 @@
-# Magazino Demo Frontend
+# Robotics Demo Frontend
 
 Build with Angular and Bootstrap (for css)
 A robot user interface integrated with ROS (Robot Operating System)
